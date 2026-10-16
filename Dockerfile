@@ -11,4 +11,4 @@ ENV PYTHONUNBUFFERED=1
 WORKDIR /app
 
 # コンテナ起動時に実行するコマンドを指定
-CMD ["python", "--version"]
+CMD ["python", "app.py"]
