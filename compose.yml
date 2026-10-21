@@ -1,7 +1,18 @@
 services:
+  # サービス名：python
   python:
+    # コンテナイメージのビルド設定
     build:
+      # 現在のプロジェクトディレクトリを指定
       context: .
+
+      # Dockerfileをビルドに使用
       dockerfile: Dockerfile
+
+    # PC側とコンテナ内の/appを同期する設定
     volumes:
       - .:/app
+    
+    # PC側の8000番ポートから、コンテナ側の8000番ポートにアクセス
+    ports:
+      - "8000:8000"
